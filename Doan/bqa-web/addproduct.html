@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="./css/addproduct.css" type="text/css">
+    <!-- FontAwesome Link -->
+    <link rel="stylesheet" href="./css/addproduct.css">
+</head>
+<body>
+    <section id="header">
+        <a href="Home.html"><img src="/placeholder.svg" class="logo" alt="Logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="Home.html">Trang chủ</a></li>
+                <li><a href="Shop.html">Cửa hàng</a></li>
+                <li><a href="Payment.html">Thanh toán</a></li>
+                <li><a href="Login.html">Đăng nhập</a></li>
+                <li><a href="addproduct.html" class="active">Thêm Sản Phẩm</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="page-header">
+        <h2>Thêm Sản Phẩm Mới</h2>
+        <p>Quản lý và thêm các sản phẩm vào cửa hàng</p>
+    </section>
+
+    <section id="add-product-form" class="section-p1">
+        <div class="form-container">
+            <h2>Biểu Mẫu Thêm Sản Phẩm</h2>
+            
+            <form id="productForm" onsubmit="handleAddProduct(event)">
+                <div class="form-group">
+                    <label for="productName">Tên Sản Phẩm</label>
+                    <input type="text" id="productName" name="productName" placeholder="Nhập tên sản phẩm" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="brand">Thương Hiệu</label>
+                    <input type="text" id="brand" name="brand" placeholder="Ví dụ: Adidas, Nike" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="price">Giá (VNĐ)</label>
+                        <input type="number" id="price" name="price" placeholder="Nhập giá sản phẩm" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity">Số Lượng</label>
+                        <input type="number" id="quantity" name="quantity" placeholder="Nhập số lượng" min="1" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Mô Tả Sản Phẩm</label>
+                    <textarea id="description" name="description" placeholder="Nhập mô tả chi tiết sản phẩm" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Danh Mục</label>
+                    <select id="category" name="category" required>
+                        <option value="">Chọn danh mục</option>
+                        <option value="ao-thun">Áo Thun</option>
+                        <option value="ao-so-mi">Áo Sơ Mi</option>
+                        <option value="quan">Quần</option>
+                        <option value="giay">Giày</option>
+                        <option value="phu-kien">Phụ Kiện</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="rating">Đánh Giá (1-5 Sao)</label>
+                    <select id="rating" name="rating" required>
+                        <option value="">Chọn đánh giá</option>
+                        <option value="5">⭐⭐⭐⭐⭐ - Tuyệt vời</option>
+                        <option value="4">⭐⭐⭐⭐ - Tốt</option>
+                        <option value="3">⭐⭐⭐ - Bình thường</option>
+                        <option value="2">⭐⭐ - Kém</option>
+                        <option value="1">⭐ - Rất kém</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="image">Hình Ảnh Sản Phẩm</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                    <small>Định dạng: JPG, PNG (Tối đa 2MB)</small>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-plus"></i> Thêm Sản Phẩm
+                    </button>
+                    <button type="reset" class="btn-reset">
+                        <i class="fas fa-redo"></i> Xóa Form
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="products-list" class="section-p1">
+        <h2>Danh Sách Sản Phẩm Đã Thêm</h2>
+        <div class="pro-container" id="productsList">
+            <!-- Sản phẩm sẽ hiển thị ở đây -->
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Đăng Ký Nhận Tin Tức</h4>
+            <p>Nhận cập nhật về các sản phẩm mới và <span>ưu đãi đặc biệt.</span></p>
+        </div>
+        <div class="form">
+            <input type="email" placeholder="Nhập email của bạn">
+            <button class="normal">Đăng Ký</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="follow">
+            <h2>Theo dõi chúng tôi</h2>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>@Ino. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./js/addproduct.js"></script>
+</body>
+</html>

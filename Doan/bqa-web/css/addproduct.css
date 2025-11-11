@@ -1,0 +1,310 @@
+/* Add Product Page Styles */
+
+/* Page Header */
+#add-product-header {
+    background-image: url("/img/banner/b1.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+    margin-bottom: 50px;
+}
+
+#add-product-header h2,
+#add-product-header p {
+    color: white;
+}
+
+/* Form Container */
+#add-product-form-section {
+    padding: 40px 80px;
+}
+
+.product-form-wrapper {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Form Column */
+.form-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.form-column h3 {
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #222;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #088178;
+    box-shadow: 0 0 8px rgba(8, 129, 120, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Form Row for Multiple Fields */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* File Upload */
+.form-group.file-upload {
+    position: relative;
+}
+
+.form-group.file-upload input[type="file"] {
+    display: none;
+}
+
+.file-upload-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 30px;
+    border: 2px dashed #088178;
+    border-radius: 8px;
+    background-color: #f5fffe;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.file-upload-label:hover {
+    background-color: #e8f6ea;
+}
+
+.file-upload-label i {
+    font-size: 24px;
+    color: #088178;
+    margin-right: 10px;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.form-column button {
+    padding: 15px 40px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 14px;
+}
+
+.btn-submit {
+    background-color: #088178;
+    color: white;
+    flex: 1;
+}
+
+.btn-submit:hover {
+    background-color: #06625f;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(8, 129, 120, 0.2);
+}
+
+.btn-reset {
+    background-color: #e1e1e1;
+    color: #222;
+    flex: 1;
+}
+
+.btn-reset:hover {
+    background-color: #d4d4d4;
+}
+
+/* Product List Column */
+.products-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.products-column h3 {
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.product-card {
+    display: flex;
+    background: white;
+    border: 1px solid #cce7d0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.product-card-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.product-card-info {
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card-title {
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.product-card-brand {
+    color: #606063;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.product-card-price {
+    color: #088178;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.product-card-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn-edit,
+.btn-delete {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s ease;
+}
+
+.btn-edit {
+    background-color: #E3E6F3;
+    color: #088178;
+}
+
+.btn-edit:hover {
+    background-color: #088178;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #f8e8e8;
+    color: #d9534f;
+}
+
+.btn-delete:hover {
+    background-color: #d9534f;
+    color: white;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #606063;
+}
+
+.empty-state i {
+    font-size: 48px;
+    color: #cce7d0;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .product-form-wrapper {
+        flex-direction: column;
+    }
+    
+    .section-p1 {
+        padding: 40px 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #add-product-form-section {
+        padding: 40px 20px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .form-column h3 {
+        font-size: 20px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+}
